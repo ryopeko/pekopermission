@@ -14,6 +14,7 @@ gem 'settingslogic'
 gem 'bcrypt'
 
 gem 'kaminari'
+gem 'garage', github: 'cookpad/garage'
 
 group :development do
   gem 'spring'
