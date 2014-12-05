@@ -3,7 +3,7 @@ class CreatePermissions < ActiveRecord::Migration
     create_table :permissions do |t|
       t.string :name
       t.integer :user_id
-      t.boolean :enabled
+      t.boolean :enabled, default: true
 
       t.timestamps
     end

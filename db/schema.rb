@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141201131329) do
   create_table "permissions", force: true do |t|
     t.string   "name"
     t.integer  "user_id"
-    t.boolean  "enabled"
+    t.boolean  "enabled",    default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
