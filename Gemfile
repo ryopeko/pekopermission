@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.2.0.rc2'
+gem 'rails', '~> 4.2.0'
 gem 'sqlite3'
-gem 'sass-rails', '~> 4.0'
-gem 'uglifier', '>= 2.5'
-gem 'coffee-rails', '~> 4.1'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4',          group: :doc
+gem 'jbuilder'
+gem 'sdoc'
 
 gem 'settingslogic'
 gem 'bcrypt'
