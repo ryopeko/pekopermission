@@ -159,6 +159,9 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     settingslogic (2.0.9)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     slop (3.6.0)
     spring (1.2.0)
     sprockets (2.12.3)
@@ -211,6 +214,7 @@ DEPENDENCIES
   sass-rails
   sdoc
   settingslogic
+  simple_form
   spring
   sqlite3
   tapp-awesome_print

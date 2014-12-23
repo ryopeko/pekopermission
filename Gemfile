@@ -16,6 +16,8 @@ gem 'bcrypt'
 gem 'kaminari'
 #gem 'garage', github: 'cookpad/garage'
 
+gem 'simple_form'
+
 group :development do
   gem 'spring'
   gem 'better_errors'
