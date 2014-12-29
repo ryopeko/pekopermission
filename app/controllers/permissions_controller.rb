@@ -6,6 +6,7 @@ class PermissionsController < ApplicationController
   end
 
   def new
+    @permission = Permission.new
   end
 
   def create
