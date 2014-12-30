@@ -20,6 +20,8 @@ gem 'simple_form'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 
+gem 'haml-rails'
+
 group :development do
   gem 'spring'
   gem 'better_errors'

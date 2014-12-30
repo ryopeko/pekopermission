@@ -1,0 +1,7 @@
+.col-md-8
+  = simple_form_for(@permission, html: { class: 'form-horizontal', role: 'form'}, wrapper: :horizontal_form) do |f|
+    = f.input :name
+    = f.input :enabled
+    .form-group
+      .col-sm-offset-3.col-sm-9
+        = f.button :submit, class: 'btn-primary', value: 'Signup'

@@ -108,6 +108,12 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     haml (4.0.6)
       tilt
+    haml-rails (0.6.0)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      haml (>= 3.1, < 5.0)
+      html2haml (>= 1.0.1)
+      railties (>= 4.0.1)
     hashie (3.3.2)
     hike (1.2.3)
     hirb (0.7.2)
@@ -115,6 +121,12 @@ GEM
       hirb (~> 0.5)
       unicode-display_width (~> 0.1.1)
     hitimes (1.2.2)
+    hpricot (0.8.6)
+    html2haml (1.0.1)
+      erubis (~> 2.7.0)
+      haml (>= 4.0.0.rc.1)
+      hpricot (~> 0.8.6)
+      ruby_parser (~> 3.1.1)
     http_accept_language (1.0.2)
     i18n (0.7.0)
     jbuilder (2.2.6)
@@ -221,6 +233,8 @@ GEM
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
+    ruby_parser (3.1.3)
+      sexp_processor (~> 4.1)
     sass (3.4.9)
     sass-rails (5.0.0)
       railties (>= 4.0.0, < 5.0)
@@ -232,6 +246,7 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     settingslogic (2.0.9)
+    sexp_processor (4.4.4)
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -278,6 +293,7 @@ DEPENDENCIES
   garage!
   guard
   guard-rspec
+  haml-rails
   hirb-unicode
   jbuilder
   jquery-rails

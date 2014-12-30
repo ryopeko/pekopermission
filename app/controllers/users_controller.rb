@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   skip_before_filter :authenticate, only: [:new, :create]
 
   def dashboard
+    @permissions = current_user.permissions
   end
 
   def new

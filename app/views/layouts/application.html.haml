@@ -1,0 +1,38 @@
+!!!
+%html
+  %head
+    %title Pekopermission
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    %nav.navbar.navbar-default{:role => "navigation"}
+      .container-fluid
+        .navbar-header
+          %a.navbar-brand{:href => "#"} Pekopermission
+        / Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              %a{:href => "#"} Dashboard
+          %ul.nav.navbar-nav.navbar-right
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                Account
+                %span.caret
+              %ul.dropdown-menu{:role => "menu"}
+                %li
+                  %a{:href => "#"} Settings
+                %li
+                  %a{:href => "#"} Singout
+        / /.navbar-collapse
+      / /.container-fluid
+    .container
+      - flash.each do |name, msg|
+        %div{:class => "alert alert-#{name.to_s == 'notice' ? 'success' : 'danger'} alert-dismissible"}
+          %button.close{"data-dismiss" => "alert", :type => "button"}
+            %span{"aria-hidden" => "true"} &times;
+            %span.sr-only Close
+          = msg
+      .row
+        = yield
