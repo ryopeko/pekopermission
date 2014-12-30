@@ -1,5 +1,6 @@
 guard :rspec, cmd: 'bundle exec rspec' do
   watch('spec/spec_helper.rb')                        { "spec" }
+  watch(%r{^config/.+\.rb$})                          { "spec" }
   watch('config/routes.rb')                           { "spec/routing" }
   watch('app/controllers/application_controller.rb')  { "spec/controllers" }
   watch(%r{^spec/.+_spec\.rb$})
