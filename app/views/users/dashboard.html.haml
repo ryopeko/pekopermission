@@ -1,2 +1,15 @@
-%h1 Users#dashboard
-%p Find me in app/views/users/dashboard.html.erb
+%table.table.table-striped.table-hover
+  %tr
+    %th name
+    %th enabled
+    %th Created at
+
+  - @permissions.each do |permission|
+    %tr
+      %td= permission.name
+      %td= permission.enabled
+      %td= permission.created_at
+
+%div
+  = paginate @permissions
+
