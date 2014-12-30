@@ -12,11 +12,11 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
 
-  def test_siginin(user)
+  def test_signin(user)
     controller.signin(user)
   end
 
-  def test_singout
+  def test_signout
     controller.signout
   end
 end
