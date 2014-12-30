@@ -38,5 +38,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'tapp-awesome_print'
   gem 'database_rewinder'
+  gem 'guard'
+  gem 'guard-rspec', require: false
 end
 
