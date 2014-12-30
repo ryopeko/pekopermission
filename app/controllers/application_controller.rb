@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     redirect_to signin_path, notice: 'Please, Sign in' unless signed_in?
   end
 
-  def sign_in(user)
+  def signin(user)
     remember_token = SecureRandom.urlsafe_base64
     session[:remember_token] = remember_token
     user.update_attribute(:remember_token, User.encrypt(remember_token))
