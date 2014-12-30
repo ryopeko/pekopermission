@@ -13,6 +13,13 @@ class ApplicationController < ActionController::Base
     @current_user = user
   end
 
+  def signout
+    current_user.try(:update_attribute, :remember_token, nil)
+    reset_session
+
+    @current_user = nil
+  end
+
   def current_user
     remember_token = session[:remember_token] || return
     @current_user ||= User.find_by(remember_token: User.encrypt(remember_token))
