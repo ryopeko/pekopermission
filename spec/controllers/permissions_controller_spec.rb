@@ -34,6 +34,24 @@ RSpec.describe PermissionsController, :type => :controller do
 
         it { expect(response).to redirect_to signin_path }
       end
+
+      context 'GET edit' do
+        before { get :edit, id: 1 }
+
+        it { expect(response).to redirect_to signin_path }
+      end
+
+      context 'PUT update' do
+        before { put :update, id: 1, permission: {name: 'foo'} }
+
+        it { expect(response).to redirect_to signin_path }
+      end
+
+      context 'DELETE destroy' do
+        before { delete :destroy, id: 1 }
+
+        it { expect(response).to redirect_to signin_path }
+      end
     end
 
     context 'When signed in' do
@@ -52,7 +70,36 @@ RSpec.describe PermissionsController, :type => :controller do
 
         it { expect(response).to be_success }
       end
+
+      context 'GET show' do
+        before { get :show, id: 1 }
+
+        it { expect(response).to be_success }
+      end
+
+      context 'GET index' do
+        before { get :index }
+
+        it { expect(response).to be_success }
+      end
+
+      context 'GET edit' do
+        before { get :edit, id: 1 }
+
+        it { expect(response).to be_success }
+      end
+
+      context 'PUT update' do
+        before { put :update, id: 1, permission: {name: 'foo'} }
+
+        it { expect(response).to be_success }
+      end
+
+      context 'DELETE destroy' do
+        before { delete :destroy, id: 1 }
+
+        it { expect(response).to be_success }
+      end
     end
   end
-
 end
