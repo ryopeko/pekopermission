@@ -18,6 +18,6 @@ class PermissionsController < ApplicationController
   def update
   end
 
-  def destory
+  def destroy
   end
 end
