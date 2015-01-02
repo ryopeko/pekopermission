@@ -18,7 +18,7 @@ RSpec.describe PermissionsController, :type => :controller do
       end
 
       context 'POST create' do
-        before { post :create, user: {name: 'foo', password: 'bar'} }
+        before { post :create, permission: {name: 'foo', enabled: true} }
 
         it { expect(response).to redirect_to signin_path }
       end
