@@ -15,6 +15,7 @@ gem 'bcrypt'
 
 gem 'kaminari'
 gem 'garage', github: 'cookpad/garage'
+gem 'responders', '~> 2.0'
 
 gem 'simple_form'
 
