@@ -14,4 +14,13 @@ class User < ActiveRecord::Base
   def self.encrypt(token)
     Digest::SHA1.hexdigest(token)
   end
+
+  def self.build_permissions(perms, other, target)
+    perms.permits! :read
+  end
+
+  def build_permissions(perms, other)
+    perms.permits! :read
+    perms.permits! :write
+  end
 end
