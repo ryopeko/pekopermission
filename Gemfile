@@ -17,6 +17,8 @@ gem 'kaminari'
 gem 'garage', github: 'cookpad/garage'
 gem 'responders', '~> 2.0'
 
+gem 'oauth2'
+
 gem 'simple_form'
 
 gem 'bootstrap-sass', '~> 3.3.1'

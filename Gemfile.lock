@@ -303,6 +303,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   kaminari
+  oauth2
   pry-rails
   quiet_assets
   rails (~> 4.2.0)
