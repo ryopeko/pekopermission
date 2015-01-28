@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128121335) do
+ActiveRecord::Schema.define(version: 20150128122459) do
 
   create_table "oauth_access_grants", force: :cascade do |t|
     t.integer  "resource_owner_id", null: false
@@ -53,9 +53,9 @@ ActiveRecord::Schema.define(version: 20150128121335) do
   add_index "oauth_applications", ["uid"], name: "index_oauth_applications_on_uid", unique: true
 
   create_table "permissions", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.integer  "user_id"
-    t.boolean  "enabled",                default: true
+    t.boolean  "enabled",    default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -66,9 +66,19 @@ ActiveRecord::Schema.define(version: 20150128121335) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_roles", force: :cascade do |t|
+    t.integer  "user_id_id", null: false
+    t.integer  "role_id_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "user_roles", ["role_id_id"], name: "index_user_roles_on_role_id_id"
+  add_index "user_roles", ["user_id_id"], name: "index_user_roles_on_user_id_id"
+
   create_table "users", force: :cascade do |t|
-    t.string   "name",            limit: 255
-    t.string   "password_digest", limit: 255
+    t.string   "name"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "remember_token"
