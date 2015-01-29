@@ -25,4 +25,8 @@ class User < ActiveRecord::Base
     perms.permits! :read
     perms.permits! :write
   end
+
+  def admin?
+    !!self.roles.find_by(name: 'admin')
+  end
 end
