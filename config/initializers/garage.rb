@@ -12,6 +12,11 @@ Doorkeeper.configure do
   default_scopes :public
   optional_scopes(*Garage::TokenScope.optional_scopes)
 
+
+  admin_authenticator do |routes|
+    User.find_by(name: params[:name]).try(:admin?) || (raise ActionController::RoutingError.new('Not Found'))
+  end
+
   resource_owner_from_credentials do |routes|
     User.find_by(name: params[:name])
   end
