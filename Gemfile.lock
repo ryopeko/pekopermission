@@ -210,6 +210,10 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
+    rambulance (0.3.0)
+      actionpack
+      activesupport
+      railties
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -307,6 +311,7 @@ DEPENDENCIES
   pry-rails
   quiet_assets
   rails (~> 4.2.0)
+  rambulance
   responders (~> 2.0)
   rspec-core (~> 3.1)
   rspec-expectations (~> 3.1)

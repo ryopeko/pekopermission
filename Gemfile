@@ -20,6 +20,7 @@ gem 'responders', '~> 2.0'
 gem 'oauth2'
 
 gem 'simple_form'
+gem 'rambulance'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 
