@@ -2,9 +2,11 @@ class Oauth::ApplicationsController < Doorkeeper::ApplicationsController
   include SessionsHelper
   before_filter :authenticate
 
+  class AdminPermissionDeniedError < StandardError; end
+
   private
   def authenticate
     super
-    redirect_to signin_path, notice: 'You cannot access a this page.' unless current_user.admin?
+    raise AdminPermissionDeniedError unless signed_in? && current_user.admin?
   end
 end
