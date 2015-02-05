@@ -24,7 +24,7 @@
                 %li
                   %a{:href => "#"} Settings
                 %li
-                  %a{:href => "#"} Singout
+                  = link_to('Signout', signout_path, method: :delete)
         / /.navbar-collapse
       / /.container-fluid
     .container
