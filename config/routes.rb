@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  use_doorkeeper
+  use_doorkeeper do
+    controllers :applications => 'oauth/applications'
+  end
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :permissions
