@@ -29,6 +29,7 @@ Rambulance.setup do |config|
     # "CanCan::AccessDenied"          => :forbidden,
     # "Pundit::NotAuthorizedError"    => :forbidden,
     # "YourCustomException"           => :not_found
+    Oauth::ApplicationsController::AdminPermissionDeniedError => :not_found
   }
 
   # The template name for the layout of the error pages. The default value is
