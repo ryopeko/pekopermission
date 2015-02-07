@@ -7,6 +7,6 @@ class Oauth::ApplicationsController < Doorkeeper::ApplicationsController
   private
   def authenticate
     super
-    raise AdminPermissionDeniedError unless signed_in? && current_user.admin?
+    raise AdminPermissionDeniedError unless signed_in_as_admin?
   end
 end
