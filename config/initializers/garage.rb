@@ -3,6 +3,10 @@ Garage.configure {}
 Garage::TokenScope.configure do
   register :public, desc: 'acessing publicly available data' do
     access :read, User
+  end
+
+  register :personal do
+    access :read, User
     access :write, User
   end
 end
