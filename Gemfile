@@ -35,11 +35,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails',        '~> 3.1'
-  gem 'rspec-core',         '~> 3.1'
-  gem 'rspec-expectations', '~> 3.1'
-  gem 'rspec-mocks',        '~> 3.1'
-  gem 'rspec-support',      '~> 3.1'
+  gem 'rspec-rails'
+  gem 'rspec-core'
+  gem 'rspec-expectations'
+  gem 'rspec-mocks'
+  gem 'rspec-support'
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'tapp-awesome_print'
