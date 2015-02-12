@@ -1,10 +1,6 @@
 Garage.configure {}
 
 Garage::TokenScope.configure do
-  register :public, desc: 'acessing publicly available data' do
-    access :read, User
-  end
-
   register :personal do
     access :read, User
     access :write, User
@@ -13,7 +9,7 @@ end
 
 Doorkeeper.configure do
   orm :active_record
-  default_scopes :public
+  default_scopes :personal
   optional_scopes(*Garage::TokenScope.optional_scopes)
 
   resource_owner_from_credentials do |routes|
