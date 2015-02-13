@@ -4,6 +4,9 @@ Garage::TokenScope.configure do
   register :personal do
     access :read, User
     access :write, User
+
+    access :read, Permission
+    access :write, Permission
   end
 end
 
