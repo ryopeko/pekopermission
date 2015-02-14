@@ -15,16 +15,17 @@
           %ul.nav.navbar-nav
             %li
               %a{:href => "#"} Dashboard
-          %ul.nav.navbar-nav.navbar-right
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                Account
-                %span.caret
-              %ul.dropdown-menu{:role => "menu"}
-                %li
-                  %a{:href => "#"} Settings
-                %li
-                  = link_to('Signout', signout_path, method: :delete)
+          - if signed_in?
+            %ul.nav.navbar-nav.navbar-right
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Account
+                  %span.caret
+                %ul.dropdown-menu{:role => "menu"}
+                  %li
+                    %a{:href => "#"} Settings
+                  %li
+                    = link_to('Signout', signout_path, method: :delete)
         / /.navbar-collapse
       / /.container-fluid
     .container
